@@ -90,11 +90,11 @@ nav a {
 
 .hero {
     min-height:100vh;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
+    display:flex;
     align-items:center;
+    justify-content:center;
     padding:120px 10% 80px;
-    gap:70px;
+    gap:80px;
 }
 
 
