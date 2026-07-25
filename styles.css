@@ -1,51 +1,430 @@
-:root{--black:#050505;--panel:#0b0a08;--gold:#d5aa2a;--gold2:#f0d67b;--cream:#f7edcf;--white:#f7f7f7;--muted:#c8c1ad;--line:rgba(213,170,42,.35)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:Montserrat,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
-.site-header{position:sticky;top:0;z-index:40;display:grid;grid-template-columns:190px 1fr 170px;align-items:center;gap:24px;padding:12px clamp(18px,4vw,64px);background:rgba(3,3,3,.97);border-bottom:1px solid var(--line)}
-.brand{display:flex;flex-direction:column;line-height:1}.brand-mark{font:700 38px/.85 'Cormorant Garamond',serif;color:var(--gold)}.brand-name{font-size:9px;letter-spacing:2.5px;color:var(--gold2);margin-top:8px}.nav{display:flex;justify-content:center;gap:28px}.nav a{font-size:11px;letter-spacing:1.8px}.nav a:hover{color:var(--gold)}
-.menu-toggle{display:none;background:none;border:0;color:var(--gold);font-size:25px}.gold-button,.outline-button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 18px;border:1px solid var(--gold);font-size:11px;font-weight:700;letter-spacing:1.1px;transition:.2s}.gold-button{background:var(--gold);color:#070707}.outline-button{color:var(--gold);background:transparent}.gold-button:hover,.outline-button:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(213,170,42,.2)}
-.hero-image-section{display:flex;justify-content:center;background:#050505;border-bottom:1px solid var(--line);padding:0}.hero-image{width:min(100%,760px);height:auto;max-height:680px;object-fit:contain;object-position:center top}
-.hero-copy-section{text-align:center;padding:46px 22px 28px;max-width:900px;margin:auto}.eyebrow{margin:0 0 8px;color:var(--gold);font-size:9px;font-weight:700;letter-spacing:3.2px;text-transform:uppercase}.hero-copy-section h1{margin:4px 0 12px;color:var(--cream);font:600 clamp(43px,6vw,72px)/.88 'Cormorant Garamond',serif;text-transform:uppercase}.hero-copy-section h1 span{font-size:.58em;display:block}.roles{font-size:10px;letter-spacing:1.7px;font-weight:700}.gold-rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);max-width:280px;margin:22px auto}.hero-copy-section h2{margin:0;color:var(--gold2);font:600 clamp(27px,4vw,40px) 'Cormorant Garamond',serif}.quote{font:600 16px 'Cormorant Garamond',serif;color:var(--cream)}.hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:24px}.mini-nav{display:flex;justify-content:center;flex-wrap:wrap;border:1px solid var(--line);max-width:620px;margin:26px auto 0}.mini-nav a{padding:10px 16px;font-size:9px;letter-spacing:1.2px;border-right:1px solid var(--line)}.mini-nav a:last-child{border-right:0}
-.newsletter-section,.content-section,.featured-release,.video-section,.books-section,.invite-section,.press-section,.contact-section{padding:64px clamp(22px,7vw,110px);border-top:1px solid rgba(255,255,255,.04)}
-.newsletter-section{background:#090806}.newsletter-grid{max-width:980px;margin:auto;display:grid;grid-template-columns:1fr 1.1fr;gap:35px;align-items:center}.newsletter-grid h2,.content-section h2,.featured-release h2,.video-section h2,.books-section h2,.invite-section h2,.press-section h2,.contact-section h2{margin:4px 0 12px;color:var(--cream);font:600 clamp(32px,4.5vw,54px)/1 'Cormorant Garamond',serif}.newsletter-grid p,.contact-section p,.invite-section p,.vision-section p{color:var(--muted)}.newsletter-form{display:grid;grid-template-columns:1fr auto}.newsletter-form input,.contact-form input,.contact-form textarea{width:100%;border:1px solid var(--line);background:#050505;color:white;padding:14px;font:inherit}.newsletter-form input:focus,.contact-form input:focus,.contact-form textarea:focus{outline:1px solid var(--gold)}
-.release-intro{text-align:center;padding:60px 20px 72px}.release-cover-small{width:min(100%,390px);margin:18px auto;border:1px solid var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.55)}.release-intro h2{margin:18px 0 2px;color:var(--cream);font:600 clamp(28px,4vw,44px)/1.05 'Cormorant Garamond',serif;text-transform:uppercase}.featured,.release-credit{color:var(--muted)}.stream-row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:18px}.stream-row a,.stream-grid a,.epk-grid a{border:1px solid var(--line);padding:10px 18px;color:var(--gold2);font-size:10px;letter-spacing:1px}.stream-row a:hover,.stream-grid a:hover,.epk-grid a:hover{background:var(--gold);color:#050505}
-.about-copy{max-width:980px}.about-copy p{color:#d6d1c4;max-width:920px}.portrait-card{max-width:590px;margin:34px auto 0;border:1px solid var(--line);background:#0a0907;padding:16px}.portrait-card img{width:100%;max-height:650px;object-fit:contain}.portrait-card.wide{max-width:700px}
-.featured-release{background:#090806}.feature-grid{display:grid;grid-template-columns:minmax(260px,470px) 1fr;gap:38px;align-items:center;max-width:1050px;margin:auto}.feature-grid>img{width:100%;border:1px solid var(--gold)}.feature-grid h3{font:600 34px/1.05 'Cormorant Garamond',serif;color:var(--cream)}.feature-grid p{color:var(--muted)}.stream-grid{display:grid;grid-template-columns:repeat(2,minmax(130px,1fr));gap:8px;margin-top:20px}.stream-grid a{text-align:center}
-.video-section{text-align:center}.video-wrap{max-width:900px;margin:28px auto 0;aspect-ratio:16/9;border:1px solid var(--gold)}.video-wrap iframe{width:100%;height:100%;border:0}
-.cards.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1050px;margin:auto}.cards article{border:1px solid var(--line);padding:28px;background:#090806}.cards h3{font:600 28px/1.05 'Cormorant Garamond',serif;color:var(--cream)}.cards p{color:var(--muted)}
-.invite-section{text-align:left}.invite-section>p:not(.eyebrow){max-width:850px}.invite-section .gold-button{margin-top:14px}.vision-section{text-align:center;padding:58px 24px;background:linear-gradient(120deg,#120b08,#2a110f,#100906);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.vision-section h2{margin:4px 0 12px;color:var(--cream);font:600 clamp(34px,5vw,58px)/1 'Cormorant Garamond',serif}.vision-section p{max-width:820px;margin:0 auto 22px}
-.epk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:920px;margin:26px auto 0}.epk-grid a{text-align:center}
-.contact-section{background:#090806}.email-line a{color:var(--gold2);font-size:18px}.contact-divider{height:1px;background:var(--line);margin:30px 0}.contact-section h3{font:600 30px 'Cormorant Garamond',serif;color:var(--cream)}.contact-form{display:grid;gap:12px;max-width:850px}.contact-form textarea{resize:vertical}.contact-form .gold-button{justify-self:start}
-footer{display:flex;justify-content:space-between;align-items:end;gap:20px;padding:28px clamp(22px,5vw,80px);border-top:1px solid var(--line);color:#9a9587;font-size:11px}
-@media(max-width:850px){.site-header{grid-template-columns:1fr auto}.header-cta{display:none}.menu-toggle{display:block}.nav{display:none;position:absolute;top:65px;left:0;right:0;flex-direction:column;gap:0;background:#050505;border-bottom:1px solid var(--line)}.nav.open{display:flex}.nav a{padding:15px 22px;border-top:1px solid rgba(255,255,255,.05)}.newsletter-grid,.feature-grid,.cards.two{grid-template-columns:1fr}.feature-grid{max-width:560px}.epk-grid{grid-template-columns:repeat(2,1fr)}.hero-image{width:min(100%,620px);max-height:none}}
-@media(max-width:520px){.hero-image{width:100%}.hero-copy-section{padding-top:34px}.hero-copy-section h1{font-size:44px}.mini-nav a{flex:1 1 33%;border-bottom:1px solid var(--line)}.newsletter-form{grid-template-columns:1fr}.newsletter-form .gold-button{width:100%}.newsletter-section,.content-section,.featured-release,.video-section,.books-section,.invite-section,.press-section,.contact-section{padding:52px 20px}.release-cover-small{max-width:330px}.stream-grid{grid-template-columns:1fr}.epk-grid{grid-template-columns:1fr 1fr}footer{flex-direction:column;align-items:flex-start}}
+/* =========================================
+   DR. TIMOTHY WHITLEY OFFICIAL WEBSITE
+   Luxury Black + Gold Theme
+========================================= */
 
-/* Professional portrait crops supplied by Dr. Timothy Whitley */
-.portrait-card-brand{
-  max-width:760px;
-  padding:0;
-  overflow:hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.portrait-card-brand img{
-  width:100%;
-  max-height:none;
-  object-fit:cover;
+
+html {
+    scroll-behavior: smooth;
 }
-.invite-photo{
-  max-width:1100px;
-  padding:0;
-  overflow:hidden;
+
+body {
+    background: #050505;
+    color: #f5e6b3;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.7;
 }
-.invite-photo img{
-  width:100%;
-  max-height:none;
-  aspect-ratio:1299/714;
-  object-fit:cover;
-  object-position:center;
+
+img {
+    max-width: 100%;
+    display: block;
 }
-@media(max-width:700px){
-  .portrait-card-brand{max-width:520px}
-  .invite-photo img{
-    aspect-ratio:4/3;
-    object-position:38% center;
-  }
+
+a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3b2d0b;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.brand {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: #d4af37;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+.brand-mark {
+    font-size: 22px;
+}
+
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+
+.nav a {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero-image-section {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px 20px;
+}
+
+
+.hero-image {
+
+    width: min(600px, 80vw);
+    height: auto;
+    object-fit: contain;
+
+}
+
+
+.hero-copy-section {
+
+    text-align: center;
+    padding: 40px 10% 90px;
+
+}
+
+
+.eyebrow {
+
+    color: #d4af37;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 20px;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+    color: #f5e6b3;
+
+}
+
+
+h1 {
+
+    font-size: clamp(45px, 6vw, 85px);
+    letter-spacing: 4px;
+
+}
+
+
+h1 span {
+
+    display: block;
+    font-size: .45em;
+
+}
+
+
+.roles {
+
+    margin-top: 20px;
+    letter-spacing: 3px;
+    color: #d4af37;
+
+}
+
+
+.gold-rule {
+
+    width: 100px;
+    height: 2px;
+    background: #d4af37;
+    margin: 35px auto;
+
+}
+
+
+.quote {
+
+    font-size: 20px;
+    font-style: italic;
+    margin: 30px auto;
+}
+
+
+.hero-actions {
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+}
+
+
+.gold-button,
+.outline-button {
+
+    padding: 12px 28px;
+    border: 1px solid #d4af37;
+    letter-spacing: 2px;
+    font-size: 12px;
+
+}
+
+
+.gold-button {
+
+    background: #d4af37;
+    color: #000;
+
+}
+
+
+.outline-button {
+
+    color: #d4af37;
+
+}
+
+
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+
+section {
+
+    padding: 80px 10%;
+
+}
+
+
+.newsletter-grid,
+.feature-grid {
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    align-items: center;
+
+}
+
+
+
+/* =========================
+   RELEASE
+========================= */
+
+
+.release-intro {
+
+    text-align: center;
+
+}
+
+
+.release-cover-small {
+
+    width: 280px;
+    margin: 30px auto;
+    border: 1px solid #d4af37;
+
+}
+
+
+.stream-row,
+.stream-grid {
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+
+.stream-row a,
+.stream-grid a {
+
+    border: 1px solid #d4af37;
+    padding: 10px 20px;
+
+}
+
+
+
+
+/* =========================
+   ABOUT
+========================= */
+
+
+.about-copy {
+
+    max-width: 900px;
+    margin: auto;
+
+}
+
+
+.portrait-card {
+
+    margin: 50px auto;
+    width: 350px;
+
+}
+
+
+.portrait-card img {
+
+    border: 1px solid #d4af37;
+
+}
+
+
+
+/* =========================
+   FEATURED RELEASE
+========================= */
+
+
+.feature-grid img {
+
+    width: 450px;
+    margin: auto;
+
+}
+
+
+.feature-grid h3 {
+
+    font-size: 40px;
+
+}
+
+
+
+/* =========================
+   VIDEO
+========================= */
+
+
+.video-container {
+
+    max-width: 900px;
+    margin: auto;
+    aspect-ratio: 16/9;
+
+}
+
+
+.video-container iframe {
+
+    width:100%;
+    height:100%;
+
+}
+
+
+
+/* =========================
+   BOOKS
+========================= */
+
+
+.books-grid {
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+
+}
+
+
+.book-card {
+
+    border:1px solid #3b2d0b;
+    padding:30px;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer {
+
+    text-align:center;
+    padding:40px;
+    border-top:1px solid #3b2d0b;
+    color:#777;
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:800px){
+
+.site-header {
+
+    flex-direction:column;
+    gap:20px;
+
+}
+
+
+.nav {
+
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+
+.newsletter-grid,
+.feature-grid,
+.books-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+h1 {
+
+    font-size:45px;
+
+}
+
+
 }
