@@ -329,3 +329,38 @@ font-size:40px;
   margin: 0 auto 24px auto;
   border-radius: 8px;
 }
+.book-entry {
+  margin-bottom: 48px;
+}
+
+.book-entry h3 {
+  margin-bottom: 8px;
+}
+
+.book-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0 12px;
+}
+
+.retailer-link {
+  display: inline-block;
+  font-size: 14px;
+  color: #c9a227;
+  text-decoration: underline;
+  margin-top: 8px;
+}
+
+.coming-soon-badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 18px;
+  border: 1px solid #c9a227;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #c9a227;
+  text-transform: uppercase;
+}
