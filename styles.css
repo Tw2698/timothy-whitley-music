@@ -368,3 +368,11 @@ font-size:40px;
   display: inline-block;
   margin-top: 20px;
 }
+.welcome-banner {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto 40px auto;
+  border-radius: 8px;
+}
