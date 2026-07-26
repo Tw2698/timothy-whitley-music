@@ -364,3 +364,7 @@ font-size:40px;
   color: #c9a227;
   text-transform: uppercase;
 }
+#contact .gold-button {
+  display: inline-block;
+  margin-top: 20px;
+}
